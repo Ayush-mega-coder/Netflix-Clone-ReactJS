@@ -1,0 +1,38 @@
+.row {
+  margin-left: 20px;
+  color: white;
+}
+
+.row_posters {
+  display: flex;
+  /* only x axis scroll instead of whole app */
+  overflow-y: hidden;
+  overflow-x: scroll;
+  /*padding lets the transform work well */
+  padding: 20px;
+}
+.row_posters::-webkit-scrollbar {
+  /*this tells browsers that dont show the scrollbar but keep the functionalities */
+  display: none;
+}
+
+.row_poster {
+  object-fit: contain;
+  width: 12%;
+  max-height: 100px;
+  margin-right: 10px;
+  transition: transform 450ms;
+}
+.row_poster:hover {
+  /* this pop up the image when we hover on it*/
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+/* giving different style to the large row */
+.row_posterLarge {
+  max-height: 250px;
+}
+.row_posterLarge:hover {
+  transform: scale(1.09);
+}
